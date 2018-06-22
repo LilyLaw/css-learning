@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>input type = number 去掉里面的上下箭头</title>
+	<style>
+	    input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -ms-appearance: none;
+            -o-appearance: none;
+        }
+        input[type="number"]{
+            -moz-appearance: textfield;
+            -webkit-appearance: textfield;
+            -ms-appearance: textfield;
+            -o-appearance: textfield;
+        }
+	</style>
+</head>
+<body>
+	<input type="number" >
+</body>
+</html>
