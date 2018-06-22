@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css 写三角形</title>
+	<style>
+		div{
+			margin: 20px;
+		}
+		div.arrow-up {
+		  width:0px;
+		  height:0px;
+		  border-left:15px solid transparent;  /* left arrow slant */
+		  border-right:15px solid transparent; /* right arrow slant */
+		  border-bottom:15px solid #2f2f2f; /* bottom, add background color here */
+		  font-size:0px;
+		  line-height:0px;
+		}
+		 
+		/* create an arrow that points down */
+		div.arrow-bottom {
+		  width:0px;
+		  height:0px;
+		  border-left:15px solid transparent;
+		  border-right:15px solid transparent;
+		  border-top:15px solid #2f2f2f;
+		  font-size:0px;
+		  line-height:0px;
+		}
+		 
+		/* create an arrow that points left */
+		div.arrow-left {
+		  width:0px;
+		  height:0px;
+		  border-bottom:15px solid transparent;  /* left arrow slant */
+		  border-top:15px solid transparent; /* right arrow slant */
+		  border-right:15px solid #2f2f2f; /* bottom, add background color here */
+		  font-size:0px;
+		  line-height:0px;
+		}
+		 
+		/* create an arrow that points right */
+		div.arrow-right {
+		  width:0px;
+		  height:0px;
+		  border-bottom:15px solid transparent;  /* left arrow slant */
+		  border-top:15px solid transparent; /* right arrow slant */
+		  border-left:15px solid #2f2f2f; /* bottom, add background color here */
+		  font-size:0px;
+		  line-height:0px;
+		}
+		div.mine{
+			width: 0px;
+			height: 0px;
+			border-left: 15px solid transparent;
+			border-right: 15px solid red;
+			border-top: 15px solid transparent;
+			font-size: 0px;
+			line-height: 0px;
+		}
+	</style>
+</head>
+<body>
+	<div class="arrow-up"></div>
+	<div class="arrow-bottom"></div>
+	<div class="arrow-left"></div>
+	<div class="arrow-right"></div>
+	<div class="mine"></div>
+</body>
+</html>
