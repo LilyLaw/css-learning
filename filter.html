@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>filter</title>
+	<style>
+		/*
+		    grayscale 灰度               值为0-1之间的小数
+		    sepia 褐色　　　　　　   值为0-1之间的小数
+		    saturate 饱和度　　　　 值为num
+		    hue-rotate 色相旋转　　值为angle
+		    invert 反色　　　　　　  值为0-1之间的小数
+		    opacity 透明度　　　　　值为0-1之间的小数
+		    brightness 亮度　　　　 值为0-1之间的小数
+		    contrast 对比度　　　　 值为num
+		    blur 模糊　　　　　　     值为length
+		    drop-shadow 阴影
+		*/
+		.both{
+			width: 350px;
+			padding: 10px;
+			box-sizing:border-box;
+			margin: auto;
+		}
+		.both img{
+			width: 100%;
+			height: auto;
+		}
+		.grayscale img{	/*黑白色*/
+			filter:grayscale(100%);
+			-webkit-filter: grayscale(100%);
+		    -moz-filter: grayscale(100%);
+		    -ms-filter: grayscale(100%);
+		    -o-filter: grayscale(100%);
+		}
+		.sepia img{ /*复古褐色*/
+			filter:sepia(100%);
+			-webkit-filter: sepia(100%);
+		    -moz-filter: sepia(100%);
+		    -ms-filter: sepia(100%);
+		    -o-filter: sepia(100%);
+		}
+		.saturate img{ /*饱和度*/
+			filter:saturate(80);
+			-webkit-filter: saturate(80);
+		    -moz-filter: saturate(80);
+		    -ms-filter: saturate(80);
+		    -o-filter: saturate(80);
+		}
+		.hue-rotate img{ /*色相*/
+			filter:hue-rotate(330deg);
+			-webkit-filter: hue-rotate(330deg);
+		    -moz-filter: hue-rotate(330deg);
+		    -ms-filter: hue-rotate(330deg);
+		    -o-filter: hue-rotate(330deg);
+		}
+		.invert img{ /*反色*/
+			filter:invert(1);
+			-webkit-filter: invert(1);
+		    -moz-filter: invert(1);
+		    -ms-filter: invert(1);
+		    -o-filter: invert(1);
+		}
+		.opacity img{ /*透明度*/
+			filter:opacity(0.6);
+			-webkit-filter: opacity(0.6);
+		    -moz-filter: opacity(0.6);
+		    -ms-filter: opacity(0.6);
+		    -o-filter: opacity(0.6);
+		}
+		.brightness img{ /*亮度*/
+			filter:brightness(0.6);
+			-webkit-filter: brightness(0.6);
+		    -moz-filter: brightness(0.6);
+		    -ms-filter: brightness(0.6);
+		    -o-filter: brightness(0.6);
+		}
+		.contrast img{ /*对比度*/
+			filter:contrast(5);
+			-webkit-filter: contrast(5);
+		    -moz-filter: contrast(5);
+		    -ms-filter: contrast(5);
+		    -o-filter: contrast(5);
+		}
+		.drop-shadow img{ /*阴影*/
+			filter:drop-shadow(10px 10px 10px #000);
+			-webkit-filter: drop-shadow(10px 10px 10px #000);
+		    -moz-filter: drop-shadow(10px 10px 10px #000);
+		    -ms-filter: drop-shadow(10px 10px 10px #000);
+		    -o-filter: drop-shadow(10px 10px 10px #000);
+		}
+		.blur img{ /*模糊*/
+			filter:blur(5px);
+			-webkit-filter: blur(5px);
+		    -moz-filter: blur(5px);
+		    -ms-filter: blur(5px);
+		    -o-filter: blur(5px);
+		}
+	</style>
+</head>
+<body>
+	<div class="both none"><img src="img/4.jpg" alt=""></div>
+	<div class="both grayscale"><img src="img/4.jpg" alt=""></div>
+	<div class="both sepia"><img src="img/4.jpg" alt=""></div>
+	<div class="both saturate"><img src="img/4.jpg" alt=""></div>
+	<div class="both hue-rotate"><img src="img/4.jpg" alt=""></div>
+	<div class="both invert"><img src="img/4.jpg" alt=""></div>
+	<div class="both opacity"><img src="img/4.jpg" alt=""></div>
+	<div class="both brightness"><img src="img/4.jpg" alt=""></div>
+	<div class="both contrast"><img src="img/4.jpg" alt=""></div>
+	<div class="both drop-shadow"><img src="img/4.jpg" alt=""></div>
+	<div class="both blur"><img src="img/4.jpg" alt=""></div>
+</body>
+</html>
