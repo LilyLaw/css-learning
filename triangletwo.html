@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css linear-gradient 切角2</title>
+	<style>
+		div{
+			margin: 20px;
+		}
+		div.test{
+			/*了解linear-gradient几个参数 参考链接 https://www.w3cplus.com/css3/do-you-really-understand-css-linear-gradients.html*/
+			background: #58a;
+			background: linear-gradient(-45deg, transparent 15px, #58a 0);
+			width: 300px;
+			height: 300px;
+		}
+		div.test1{
+			width: 400px;
+			height: 300px;
+			background: linear-gradient(to top right,#fff 15px,green 30px,yellow);
+			/*像素值都是位置，不是宽度*/
+		}
+	</style>
+</head>
+<body>
+	<div class="test">the furthest distance in the world,is not between love and death</div>
+	<div class="test1">the furthest distance in the world,is not between love and death</div>
+</body>
+</html>
