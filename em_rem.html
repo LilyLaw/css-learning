@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>em ,  rem</title>
+	<style>
+		html{
+			font-size: 18px;
+		}
+		.box1{
+			width: 5rem;
+			height: 4rem;
+			background: green;
+			margin-bottom: 3rem;
+		}
+		.box2{
+			font-size: 15px;
+			width: 5em;
+			height: 4em;
+			background: blue;
+		}
+	</style>
+</head>
+<!-- em  相对于此元素的字体大小,如 一个div 字体大小15px,那么 1em = 15px;
+rem 相对于文档根元素,如 html 的字体大小是17px 那么 1rem = 17px; -->
+<body>
+	<div class="box1"></div>
+	<div class="box2"></div>
+</body>
+</html>
