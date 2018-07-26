@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>box-shadow 1</title>
+	<style>
+		/* 参数设置
+		h-shadow:水平阴影的位置。允许负值。
+		v-shadow:垂直阴影的位置。允许负值。
+		blur:模糊距离。
+		spread:扩张半径（可正可负。投影面积则可大可小）
+		color：阴影颜色
+		inset:将外部阴影 (outset) 改为内部阴影。
+
+		box-shadow: X轴偏移量 Y轴偏移量 [阴影模糊半径] [阴影扩展半径] [阴影颜色] [投影方式];
+		*/
+
+		div{
+			width: 200px;
+			height: 200px;
+			margin-bottom: 20px;
+		}
+		.boxshadow-outset{
+			box-shadow: 4px 4px 4px 6px #00ffff;
+		}
+		.boxshadow-inset{
+			box-shadow: 4px 4px 4px 6px #00ffff inset;
+		}
+		.boxshadow-multi{
+			box-shadow: 4px 4px 4px 6px #00ffff,0px 0px 10px 20px red,0px 0px 10px 10px yellow;
+			/*多重阴影，叠加，第一个在第一层，第二个在第二层，以此类推*/
+		}
+	</style>
+</head>
+<body>
+	<div class="boxshadow-outset"></div>
+	<div class="boxshadow-inset"></div>
+	<div class="boxshadow-multi"></div>
+</body>
+</html>
