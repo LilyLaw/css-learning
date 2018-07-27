@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css var() 2</title>
+	<style>
+		/*css var() 变量必须在块{}里面声明，否则无效
+		同时应注意权重和变量的应用规则*/
+		:root{
+			--color:#ff0000;
+		}
+		div{
+			--color:#00ff00;
+		}
+		a{
+			--color:#0000ff;
+		}
+		*{
+			color: var(--color);
+		}
+	</style>
+</head>
+<body>
+	<p>ff0000</p>
+	<div>00ff00</div>
+	<a href="javascript:;">0000ff</a>
+	<h1>ff0000</h1>
+</body>
+</html>
