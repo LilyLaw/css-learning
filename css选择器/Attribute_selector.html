@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> css 属性选择器 </title>
+	<style type="text/css">
+		/*css 属性选择器
+		E[attr^="xx"]  E元素，且属性attr的属性值以"xx"开头
+		E[attr$="xx"]  E元素，且属性attr的属性值以"xx"结尾
+		E[attr*="xx"]  E元素，且属性attr的属性值任意位置包含“xx”
+		*/
+
+
+		div{
+			width: 300px;
+			height: 200px;
+			margin-bottom: 20px;
+			background: lightblue;
+		}
+		div[title*="es"]{
+			background:lightgreen;
+		}
+	</style>
+</head>
+<body>
+	<div class="box" title="thess"></div>
+	<div class="box" title="thees"></div>
+	<div class="box" title="mnss"></div>
+	<div class="box" title="mnes"></div>
+	<div class="box" title="yesbm"></div>
+	<div class="box" title="esbnmnm"></div>
+</body>
+</html>
