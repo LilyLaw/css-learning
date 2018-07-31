@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>text-overflow</title>
+	<style type="text/css">
+		/*text-overflow 属性值ellipsis 为显示 ... clip为剪切
+		但真要显示出这些效果，必须再加属性 overflow:hidden 和 white-space:nowrap;*/
+		div{
+			width: 300px;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
+		}
+	</style>
+</head>
+<body>
+	<div>春江潮水连海平，海上明月共潮生，滟滟随波千万里，何处春江无月明，江流宛转绕芳甸，月照花林皆似霰</div>
+</body>
+</html>
