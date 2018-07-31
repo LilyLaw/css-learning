@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>background</title>
+	<style type="text/css">
+		/*background-origin 表示背景图片的起始位置*/
+		/*background-origin ： border-box | padding-box | content-box;*/
+		/*border-box: 从边框开始
+		padding-box: 从内边距开始
+		content-box: 从内容区域开始*/
+
+		/*如果背景不是no-repeat，这个属性无效，它会从边框开始显示。*/
+		.box{
+			width: 800px;
+			height: 900px;
+			padding: 50px;
+			border: 20px solid red;
+			background-color: lightgreen;
+			background-image: url(../img/4.jpg);
+			background-repeat: no-repeat;
+			background-origin: content-box;
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+</body>
+</html>

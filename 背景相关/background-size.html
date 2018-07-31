@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>background-size</title>
+	<style type="text/css">
+		/*background-size 可取以下范围的值 auto | <长度值> | <百分比> | cover | contain*/
+		/*auto：默认值，不改变背景图片的原始高度和宽度；*/
+		/*<长度值> ：成对出现如 200px 500px 时，将宽高分别设置成这两个值。当设置一个值时，将其作为图片宽度值来等比缩放；*/
+		/*<百分比> : 成对出现如 80% 90% 时，将宽高按照使用元素的宽高等比缩放（非原图像），当设置一个值时，将其作为图片宽度缩放，之后高度按原图像等比缩放*/
+		/*cover 将图片等比缩放填满整个容器*/
+		/*contain 将图片等比缩放直至某一边填满整个容器*/
+		div.demo{
+			width: 600px;
+			height: 300px;
+			background-image: url(../img/4.jpg);
+			background-size: 40%;
+		}
+	</style>
+</head>
+<body>
+	<div class="demo"></div>
+</body>
+</html>

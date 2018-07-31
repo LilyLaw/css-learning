@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>background-clip</title>
+	<style type="text/css">
+		/*background-clip 主要用于将背景图片做适当剪裁以满足某些特殊需求*/
+		/*background-clip ： border-box | padding-box | content-box | no-clip*/
+		/*border-box: 从边框向外裁剪背景  默认值*/
+		/*padding-box: 从内填充向外裁剪背景*/
+		/*content-box: 从内容区域向外裁剪背景*/
+		div.demo{
+			width: 800px;
+			height: 1000px;
+			padding: 50px;
+			border: 20px solid red;
+			background-color: lightgreen;
+			background-image: url(../img/4.jpg);
+			background-repeat: no-repeat;
+			background-origin: border-box;
+			background-clip: content-box;
+		}
+	</style>
+</head>
+<body>
+	<div class="demo"></div>
+</body>
+</html>
