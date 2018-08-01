@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>only-of-type</title>
+	<style>
+		/*“:only-of-type”是表示一个元素他有很多个子元素，而其中只有一种类型的子元素是唯一的，使用“:only-of-type”选择器就可以选中这个元素中的唯一一个类型子元素。*/
+		.wrapper{
+			margin-bottom: 50px;
+			background-color: lightgreen;
+		}
+		.wrapper>*{
+			width: 300px;
+			height: 100px;
+			margin-bottom: 20px;
+			background: pink;
+		}
+		.wrapper>p:only-of-type{
+			background: blue;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<p>p1</p>
+		<div>div1</div>
+		<h3>h3 1</h3>
+		<div>div1</div>
+		<h3>h3 2</h3>
+	</div>
+	<div class="wrapper">
+		<p>p1</p>
+		<p>p1</p>
+		<p>p1</p>
+		<div>div1</div>
+		<h3>h3 1</h3>
+		<div>div1</div>
+		<h3>h3 2</h3>
+	</div>
+</body>
+</html>

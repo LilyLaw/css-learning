@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>only-child</title>
+	<style>
+		/*":only-child"选择器选择的是父元素中只有一个子元素，而且只有唯一的一个子元素。也就是说，匹配的元素的父元素中仅有一个子元素，而且是一个唯一的子元素。*/
+		ul{
+			margin-bottom: 50px;
+			background-color: lightgreen;
+		}
+		li{
+			width: 300px;
+			height: 100px;
+			margin-bottom: 20px;
+			background-color: pink;
+		}
+		ul>li:only-child{
+			background-color: blue;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<ul>
+		<li></li>
+	</ul>
+	<ul>
+		<li></li>
+	</ul>
+	<ul>
+		<li></li>
+		<li></li>
+	</ul>
+</body>
+</html>
