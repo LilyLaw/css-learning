@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>rotate()</title>
+	<style>
+		/*旋转rotate()函数通过指定的角度参数使元素相对原点进行旋转。它主要在二维空间内进行操作，设置一个角度值，用来指定旋转的幅度。如果这个值为正值，元素相对原点中心顺时针旋转；如果这个值为负值，元素相对原点中心逆时针旋转*/
+		.wrapper{
+			margin: 200px;
+			width: 300px;
+			height: 200px;
+			background-color: lightgreen;
+			transform: rotate(45deg);
+		}
+		.wrapper span{
+			display: block;
+			transform: rotate(-45deg);
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<span>旋转</span>
+	</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>skew() 扭曲</title>
+	<style>
+		/*扭曲skew()函数能够让元素倾斜显示。它可以将一个对象以其中心位置围绕着X轴和Y轴按照一定的角度倾斜。这与rotate()函数的旋转不同，rotate()函数只是旋转，而不会改变元素的形状。skew()函数不会旋转，而只会改变元素的形状。*/
+		.wrap{
+			width: 200px;
+			height: 200px;
+			background-color: lightgreen;
+			margin: 100px;
+			transform: skew(30deg,45deg);
+			/*transform: skew(45deg);*/	/*x轴和y轴都扭曲45度*/
+			/*transform: skewX(45deg);	仅在X轴扭曲*/
+			/*transform: skewY(30deg);	仅在y轴扭曲*/
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		扭曲
+	</div>
+</body>
+</html>

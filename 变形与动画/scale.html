@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>scale</title>
+	<style>
+		/*缩放 scale()函数 让元素根据中心原点对对象进行缩放。*/
+		.wrap{
+			width: 300px;
+			height: 200px;
+			background-color: lightgreen;
+		}
+		.wrap:hover{
+			/*transform: scale(0.8,0.5);	scale(X,Y)使元素水平方向和垂直方向同时缩放（也就是X轴和Y轴同时缩放）*/
+			transform: scaleX(1.2);	/*只缩放x轴
+			transform: scaleY(1.2); 只缩放y轴*/
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">我将缩放</div>
+</body>
+</html>
