@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>nth-of-type(n)</title>
+	<style>
+		.wrapper>*{
+			width: 300px;
+			height: 100px;
+			background: lightgreen;
+			margin-bottom: 10px;
+		}
+		h3:nth-of-type(2){
+			background: pink;
+		}
+
+		/*注意下面的写法不生效，因为第二个元素不是h3*/
+		/*h3:nth-of-child(2){
+			background: red;
+		}*/
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<p>p1</p>
+		<div>div1</div>
+		<h3>h3 1</h3>
+		<p>p1</p>
+		<div>div1</div>
+		<h3>h3 2</h3>
+	</div>
+</body>
+</html>

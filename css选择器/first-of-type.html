@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>first-of-type</title>
+	<style>
+		/*“:first-of-type”选择器类似于“:first-child”选择器，不同之处就是指定了元素的类型,其主要用来定位一个父元素下的某个类型的第一个子元素。*/
+		.wrapper>*{
+			width: 300px;
+			height: 200px;
+			background: lightgreen;
+		}
+		.wrapper>p:first-of-type{
+			background: pink;
+		}
+
+		/*下面的是错误的，不起作用*/
+		/*.wrapper>p:first-child{
+			background: pink;
+		}*/
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div>div</div>
+		<p>p</p>
+		<label for="">label</label>
+		<p>p</p>
+		<div>div</div>
+		<ul>
+			<li>li</li>
+			<li>li</li>
+			<li>li</li>
+		</ul>
+	</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>nth-last-of-type</title>
+	<style>
+		/*某种类型的元素倒数第几个*/
+		.wrapper>*{
+			width: 300px;
+			height: 100px;
+			background: lightgreen;
+			margin-bottom: 20px;
+		}
+		.wrapper>h3:nth-last-of-type(2){
+			background: pink;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<p>p1</p>
+		<div>div1</div>
+		<h3>h3 1</h3>
+		<p>p1</p>
+		<div>div1</div>
+		<h3>h3 2</h3>
+	</div>
+</body>
+</html>

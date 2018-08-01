@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>last-of-type</title>
+	<style>
+		/*父元素下的某个类型的最后一个子元素。*/
+		.wrapper>*{
+			width: 300px;
+			height: 100px;
+			background: lightgreen;
+			margin-bottom: 20px;
+		}
+		.wrapper>div:last-of-type{
+			background: pink;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<p>p1</p>
+		<div>div1</div>
+		<h3>h3 1</h3>
+		<p>p1</p>
+		<div>div1</div>
+		<h3>h3 2</h3>
+	</div>
+</body>
+</html>
