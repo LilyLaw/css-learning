@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>empty 选择器</title>
+	<style type="text/css">
+		/*:empty 用来选择所有内容为空的元素*/
+		p{
+			width: 300px;
+			height: 50px;
+			background:lightblue;
+		}
+		p:empty{
+			background:lightgreen;
+		}
+	</style>
+</head>
+<body>
+	<p></p>
+	<p></p>
+	<p></p>
+	<p><span></span></p>
+</body>
+</html>
