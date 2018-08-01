@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>read-only</title>
+	<style>
+		/*“:read-only”伪类选择器用来指定处于只读状态元素的样式。简单点理解就是，元素中设置了“readonly=’readonly’”*/
+		form{
+			display: flex;
+			flex-direction: column;
+		}
+		form>*{
+			width: 300px;
+			height: 50px;
+			margin-bottom: 20px;
+		}
+		input:read-only{
+			border: 1px solid green;
+		}
+	</style>
+</head>
+<body>
+	<form action="">
+		<input type="text" readonly="" value="readonly">
+		<input type="text">
+		<input type="text">
+		<input type="text">
+	</form>
+</body>
+</html>

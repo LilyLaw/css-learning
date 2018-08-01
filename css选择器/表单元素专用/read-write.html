@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>read-write</title>
+	<style>
+		/*“:read-write”选择器刚好与“:read-only”选择器相反，主要用来指定当元素处于非只读状态时的样式。*/
+		form{
+			display: flex;
+			flex-direction: column;
+		}
+		form>*{
+			width: 300px;
+			height: 50px;
+			margin-bottom: 20px;
+		}
+		input:read-write{
+			border: 1px solid green;
+		}
+	</style>
+</head>
+<body>
+	<form action="">
+		<input type="text" readonly="" value="readonly">
+		<input type="text">
+		<input type="text">
+		<input type="text">
+	</form>
+</body>
+</html>

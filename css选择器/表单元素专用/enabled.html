@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>:enabled 选择器</title>
+	<style>
+		/*表单元素有可用（“:enabled”）和不可用（“:disabled”）状态，在默认情况之下，这些表单元素都处在可用状态,通过伪选择器“:enabled”对这些表单元素设置样式。*/
+
+		/*注意是 enabled,不是enable*/
+		form{
+			display: flex;
+			flex-direction: column;
+		}
+		form>*{
+			width: 300px;
+			height: 50px;
+			margin-bottom: 20px;
+		}
+		input:enabled{
+			border: 1px solid green;
+		}
+	</style>
+</head>
+<body>
+	<form action="">
+		<input type="text">
+		<input type="text">
+		<input type="text">
+		<input type="text" disabled="disabled">
+	</form>
+</body>
+</html>

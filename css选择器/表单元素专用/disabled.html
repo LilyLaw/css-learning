@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>disabled</title>
+	<style>
+		/*:disabled用来选择不可用表单元素。要正常使用“:disabled”选择器，需要在表单元素的HTML中设置“disabled”属性。*/
+		form{
+			display: flex;
+			flex-direction: column;
+		}
+		form>*{
+			width: 300px;
+			height: 50px;
+			margin-bottom: 20px;
+		}
+		input:disabled{
+			border: 1px solid green;
+		}
+	</style>
+</head>
+<body>
+	<form action="">
+		<input type="text">
+		<input type="text">
+		<input type="text">
+		<input type="text" disabled="disabled">
+	</form>
+</body>
+</html>

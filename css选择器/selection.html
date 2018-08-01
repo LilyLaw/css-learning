@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>::selection 选择器</title>
+	<style>
+		/*“::selection”伪元素是用来匹配突出显示的文本(用鼠标选择文本时的文本)。浏览器默认情况下，用鼠标选择网页文本是以“深蓝的背景，白色的字体”显示的*/
+		::-moz-selection {
+		  background: red;
+		  color: green;
+		}
+		::selection {
+		  background: red;
+		  color: green;
+		}
+	</style>
+</head>
+<body>
+	<p>春江潮水连海平，海上明月共潮生，滟滟随波千万里，何处春江无月明</p>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>::before  ::after</title>
+	<style>
+		/*::before和::after这两个主要用来给元素的前面或后面插入内容，这两个常和"content"配合使用，使用的场景最多的就是清除浮动。
+			这些添加不会出现在DOM中，不会改变文档内容，不可复制，仅仅是在css渲染层加入。
+		*/
+		p{
+			background-color: green;
+			padding: 10px;
+			width: 300px;
+		}
+		p::before,p::after{
+			content: "xxxxxx";
+			width: 20px;
+			height: 20px;
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	<p>春江潮水连海平，海上明月共潮生，滟滟随波千万里，何处春江无月明</p>
+</body>
+</html>
