@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>first-child</title>
+	<style>
+		/*选择父元素的第一个子元素的元素E。简单点理解就是选择元素中的第一个子元素，记住是子元素，而不是后代元素。*/
+		li{
+			list-style: none;
+			width: 300px;
+			height: 100px;
+			background:lightgreen;
+			margin-bottom: 20px;
+		}
+		ul>li:first-child{
+			background: lightblue;
+		}
+		/*li:first-child{
+			background: yellow;
+		}*/
+	</style>
+</head>
+<body>
+	<ul>
+		<li>link1</li>
+		<li>link2</li>
+		<li>link3</li>
+		<li>link4</li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>last-child</title>
+	<style>
+		/*与“:first-child”选择器作用类似，不同的是“:last-child”选择器选择的是元素的最后一个子元素*/
+		li{
+			list-style: none;
+			width: 300px;
+			height: 100px;
+			background:lightgreen;
+			margin-bottom: 20px;
+		}
+		ul>li:last-child{
+			background: lightblue;
+		}
+		/*li:last-child{
+			background: yellow;
+		}*/
+	</style>
+</head>
+<body>
+	<ul>
+		<li>link1</li>
+		<li>link2</li>
+		<li>link3</li>
+		<li>link4</li>
+	</ul>
+</body>
+</html>
