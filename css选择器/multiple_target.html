@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>多个 ：target 处理</title>
+	<style type="text/css">
+		/*可以用来做导航菜单*/
+		div{
+			width: 300px;
+			height: 100px;
+			margin-bottom: 20px;
+			background:lightgreen;
+		}
+		#green:target{
+			background:green;
+		}
+		#blue:target{
+			background:blue;
+		}
+		#red:target{
+			background:red;
+		}
+		#yellow:target{
+			background:yellow;
+		}
+	</style>
+</head>
+<body>
+	<a href="#green">green</a>
+	<a href="#blue">blue</a>
+	<a href="#red">red</a>
+	<a href="#yellow">yellow</a>
+
+	<div id="green"></div>
+	<div id="blue"></div>
+	<div id="red"></div>
+	<div id="yellow"></div>
+</body>
+</html>
