@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>flex 布局</title>
+	<style>
+		/*横向排列的，横向（x方向）就是 “主轴”，纵向（y方向）就是“侧轴”。
+		纵向排列的，那么y方向就是“主轴”，x方法就是“侧轴”*/
+		/*flex-direction来改变主轴方向修改为column，其默认值是row。*/
+		/*align-items 设置或检索弹性盒子元素在侧轴（纵轴）方向上的对齐方式。
+		align-items: flex-start | flex-end | center | baseline | stretch
+			flex-start：弹性盒子元素的侧轴（纵轴）起始位置的边界紧靠住该行的侧轴（纵轴）起始边界。
+			flex-end：弹性盒子元素的侧轴（纵轴）结束位置的边界紧靠住该行的侧轴（纵轴）结束边界。
+			center：弹性盒子元素在该行的侧轴（纵轴）上居中放置。（如果该行的尺寸小于弹性盒子元素的尺寸，则会向两个方向溢出相同的长度）。
+			baseline：如弹性盒子元素的行内轴与侧轴为同一条，则该值与'flex-start'等效。其它情况下，该值将参与基线对齐。
+			stretch：如果指定侧轴大小的属性值为'auto'，则其值会使项目的边距盒的尺寸尽可能接近所在行的尺寸，但同时会遵照'min/max-width/height'属性的限制。
+		*/
+		/*justify-content 设置或检索弹性盒子元素在主轴（横轴）方向上的对齐方式。
+		justify-content: flex-start | flex-end | center | space-between | space-around
+			flex-start：弹性盒子元素将向行起始位置对齐。该行的第一个子元素的主起始位置的边界将与该行的主起始位置的边界对齐，同时所有后续的伸缩盒项目与其前一个项目对齐。
+			flex-end：弹性盒子元素将向行结束位置对齐。该行的第一个子元素的主结束位置的边界将与该行的主结束位置的边界对齐，同时所有后续的伸缩盒项目与其前一个项目对齐。
+			center：弹性盒子元素将向行中间位置对齐。该行的子元素将相互对齐并在行中居中对齐，同时第一个元素与行的主起始位置的边距等同与最后一个元素与行的主结束位置的边距（如果剩余空间是负数，则保持两端相等长度的溢出）。
+			space-between：弹性盒子元素会平均地分布在行里。如果最左边的剩余空间是负数，或该行只有一个子元素，则该值等效于'flex-start'。在其它情况下，第一个元素的边界与行的主起始位置的边界对齐，同时最后一个元素的边界与行的主结束位置的边距对齐，而剩余的伸缩盒项目则平均分布，并确保两两之间的空白空间相等。
+			space-around：弹性盒子元素会平均地分布在行里，两端保留子元素与子元素之间间距大小的一半。如果最左边的剩余空间是负数，或该行只有一个伸缩盒项目，则该值等效于'center'。在其它情况下，伸缩盒项目则平均分布，并确保两两之间的空白空间相等，同时第一个元素前的空间以及最后一个元素后的空间为其他空白空间的一半。
+		*/
+		/*flex-wrap 设置或检索伸缩盒对象的子元素超出父容器时是否换行。
+		flex-wrap: nowrap | wrap | wrap-reverse
+			nowrap：当子元素溢出父容器时不换行。
+			wrap：当子元素溢出父容器时自动换行。
+			wrap-reverse：反转 wrap 排列。
+		*/
+		/*flex-flow 属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap。
+		flex-flow: <flex-direction> || <flex-wrap>;
+		*/
+		/*align-content 属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。
+			flex-start：与交叉轴的起点对齐。
+			flex-end：与交叉轴的终点对齐。
+			center：与交叉轴的中点对齐。
+			space-between：与交叉轴两端对齐，轴线之间的间隔平均分布。
+			space-around：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。
+			stretch（默认值）：轴线占满整个交叉轴。
+		*/
+		/*order属性定义项目的排列顺序。数值越小，排列越靠前，默认为0。
+			order: <integer>;
+		*/
+		/*flex-grow 属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。
+			flex-grow: <number>
+		*/
+		/*flex-shrink 属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。 注意前提是空间不足，如果空间足够不起作用
+			flex-shrink: <number>;
+		*/
+		/*flex-basis 属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。
+			flex-basis: <length> | auto;
+			它可以设为跟width或height属性一样的值（比如350px），则项目将占据固定空间。
+			content –> width –> flex-basis (limted by max|min-width) 优先级
+		*/
+		/*flex 属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。
+		 flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
+		*/
+		/*align-self 属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch。
+			align-self: auto | flex-start | flex-end | center | baseline | stretch;
+		*/
+		ul{
+			width: 1000px;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			height: 550px;
+			/*flex-direction: row;
+			align-items: center;
+			justify-content: flex-start;*/
+			flex-wrap: wrap;
+			align-content: space-between;
+		}
+		ul>li{
+			list-style: none;
+			width: 200px;
+			background-color: lightgreen;
+			flex-basis: 400px; /*以此为准*/
+		}
+		li:nth-child(2n){
+			height: 100px;
+		}
+		li:nth-child(2n-1){
+			height: 200px;
+		}
+		li:first-child{
+			order: 9;
+			flex-grow: 2;
+		}
+		li:nth-child(2){
+			flex-grow: 2;
+			align-self: center;
+		}
+		li:nth-child(3){
+			flex-shrink: 2;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>box 01</li>
+		<li>box 02</li>
+		<li>box 03</li>
+		<li>box 04</li>
+		<li>box 05</li>
+		<li>box 06</li>
+		<li>box 07</li>
+		<li>box 08</li>
+		<li>box 09</li>
+	</ul>
+</body>
+</html>
