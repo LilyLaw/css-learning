@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>outline 属性</title>
+	<style>
+		/*外轮廓outline在页面中呈现的效果和边框border呈现的效果极其相似，但和元素边框border完全不同，外轮廓线不占用网页布局空间，不一定是矩形，外轮廓是属于一种动态样式，只有元素获取到焦点或者被激活时呈现。
+		outline: ［outline-color］ || [outline-style] || [outline-width] || [outline-offset] || inherit
+		outline-color 定义轮廓线的颜色，属性值为CSS中定义的颜色值。在实际应用中，可以将此参数省略，省略时此参数的默认值为黑色。
+		outline-style 定义轮廓线的样式，属性为CSS中定义线的样式。在实际应用中，可以将此参数省略，省略时此参数的默认值为none，省略后不对该轮廓线进行任何绘制。
+		outline-width 定义轮廓线的宽度，属性值可以为一个宽度值。在实际应用中，可以将此参数省略，省略时此参数的默认值为medium，表示绘制中等宽度的轮廓线。
+		outline-offset 定义轮廓边框的偏移位置的数值，此值可以取负数值。当此参数的值为正数值，表示轮廓边框向外偏离多少个像素；当此参数的值为负数值，表示轮廓边框向内偏移多少个像素。
+		inherit 元素继承父元素的outline效果。
+		*/
+		.demo{
+			width: 300px;
+			height: 200px;
+			background: lightgreen;
+			outline: red solid 4px;
+			outline-offset: -30px;
+		}
+	</style>
+</head>
+<body>
+	<div class="demo">
+		outline, 不是 border
+	</div>
+</body>
+</html>
