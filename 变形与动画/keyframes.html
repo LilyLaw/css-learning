@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Keyframes</title>
+	<style>
+		/*Keyframes被称为关键帧,在CSS3中其主要以“@keyframes”开头，后面紧跟着是动画名称加上一对花括号“{…}”，括号中就是一些不同时间段样式规则。*/
+		/*在一个“@keyframes”中的样式规则可以由多个百分比构成的，如在“0%”到“100%”之间创建更多个百分比，分别给每个百分比中给需要有动画效果的元素加上不同的样式，从而达到一种在不断变化的效果。*/
+		/*在@keyframes中定义动画名称时，其中0%和100%还可以使用关键词from和to来代表，其中0%对应的是from，100%对应的是to。*/
+		@keyframes wobble {
+		  0% {
+		    /*margin-left: 100px;*/
+		    background:green;
+		  }
+		  40% {
+		    /*margin-left:150px;*/
+		    background:orange;
+		  }
+		  60% {
+		    /*margin-left: 75px;*/
+		    background: blue;
+		  }
+		  100% {
+		    /*margin-left: 100px;*/
+		    background: red;
+		  }
+		}
+		div {
+		  width: 100px;
+		  height: 100px;
+		  background:red;
+		  color: #fff;
+		}
+		div:hover{
+		  animation: wobble 5s ease .1s;
+		}
+	</style>
+</head>
+<body>
+	<div>鼠标放我身上</div>
+</body>
+</html>
