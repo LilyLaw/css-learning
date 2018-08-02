@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>媒体查询</title>
+	<style>
+		/*Media Queries是CSS3新增加的一个模块功能，其最大的特色就是通过CSS3来查询媒体，然后调用对应的样式。
+		值 			设备类型
+		All			所有设备
+		Braille 	盲人用点字法触觉回馈设备
+		Embossed 	盲文打印机
+		Handheld 	便携设备
+		Print 		打印用纸或打印预览视图
+		Projection  各种投影设备
+		Screen 		电脑显示器
+		Speech 		语音或音频合成器
+		Tv 			电视机类型设备
+		Tty 		使用固定密度字母栅格的媒介，比如电传打字机和终端
+		媒体类型的引用方法也有多种，常见的有：link标签、@import和CSS3新增的@media几种：
+			link方法引入媒体类型其实就是在<link>标签引用样式的时候，通过link标签中的media属性来指定不同的媒体类型。如下所示。
+				<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+				<link rel="stylesheet" type="text/css" href="print.css" media="print" />
+			@import可以引用样式文件，同样也可以用来引用媒体类型。@import引入媒体类型主要有两种方式，一种是在样式中通过@import调用另一个样式文件；另一种方法是在<head></head>标签中的 style中引入，但这种使用方法在IE6~7都不被支持，如样式文件中调用另一个样式文件时，就可以指定对应的媒体类型。
+				@importurl(reset.css) screen;
+				@importurl(print.css) print;
+			@media是CSS3中新引进的一个特性，被称为媒体查询。在页面中也可以通过这个属性来引入媒体类型。
+				@media screen {
+				   选择器{你的样式代码写在这里…}
+				}
+		*/
+
+
+		/*Media Queries的使用方法 @media 媒体类型and （媒体特性）{你的样式}
+		注意：使用Media Queries必须要使用“@media”开头，然后指定媒体类型（也可以称为设备类型），随后是指定媒体特性（也可以称之为设备特性）。媒体特性的书写方式和样式的书写方式非常相似，主要分为两个部分，第一个部分指的是媒体特性，第二部分为媒体特性所指定的值，而且这两个部分之间使用冒号分隔。例如：
+		(max-width: 480px)
+		*/
+		body { background-color: grey; }
+		@media screen and (max-width:960px) {
+			body { background-color: red; }
+		}
+		@media screen and (max-width:768px){
+			body { background-color: orange; } 
+		}
+		@media screen and (max-width:550px) {
+			body { background-color: yellow; }
+		}
+		@media screen and (max-width:320px){
+			body { background-color: green; }
+		}
+</style>
+</head>
+<body>
+	
+</body>
+</html>
