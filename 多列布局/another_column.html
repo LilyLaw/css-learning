@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>column 其他属性</title>
+	<style>
+		/*column-width属性在定义元素列宽的时候，既可以单独使用，也可以和多列属性中其他属性配合使用。  column-width: auto | <length>*/
+		/*column-count属性主要用来给元素指定想要的列数和允许的最大列数。  column-count：auto | <integer>*/
+		/*column-gap主要用来设置列与列之间的间距，  column-gap: normal || <length>  默值为1em（如果你的字号是px，其默认值为你的font-size值）。*/
+		/*column-rule 定义列与列之间的边框宽度、边框样式和边框颜色。类似于常用的border属性。但column-rule是不占用任何空间位置的，在列与列之间改变其宽度不会改变任何列的位置。*/
+		/*column-span 定义一个分列元素中的子元素能跨列多少。有时我们需要基中一段内容或一个标题不进行分列，也就是横跨所有列，此时column-span就可以轻松实现， column-span: none | all*/
+		.colunm{
+			column-count: 2;
+			column-gap: 10px;
+			column-rule: 2px solid orange;
+		}
+		h1{		/*标题不分列*/
+			column-span: all;
+			background-color: lightgreen;
+		}
+	</style>
+</head>
+<body>
+	<div class="colunm">
+		<h1>标题不分列</h1>
+		<p>为了能在Web页面中方便实现类似报纸、杂志那种多列排版的布局，W3C特意给CSS3增加了一个多列布局模块（CSS Multi Column Layout Module）。它主要应用在文本的多列布局方面。对于文本的多列布局，我想大家并不陌生，因为报纸和杂志上我们随处可见，这种布局在报纸和杂志上都使用了几十年了，但需要在Web页面上实现文本的多列布局，正如下图所示。</p>
+		<p>为了能在Web页面中方便实现类似报纸、杂志那种多列排版的布局，W3C特意给CSS3增加了一个多列布局模块（CSS Multi Column Layout Module）。它主要应用在文本的多列布局方面。对于文本的多列布局，我想大家并不陌生，因为报纸和杂志上我们随处可见，这种布局在报纸和杂志上都使用了几十年了，但需要在Web页面上实现文本的多列布局，正如下图所示。</p>
+	</div>
+</body>
+</html>
