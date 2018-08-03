@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>counter</title>
+	<style>
+		 /*counter-reset：counter-reset:[ <identifier> <integer>? ]+ | none | inherit
+		 	identifier：用来定义计数器的名称，这个名称可以自定义，如：item。而且后面可以紧跟一个整数值，中间用空格分隔开来，如headings0；
+ 			integer：此值用来设置调用计算数器时起始值，默认值为0。
+
+		 counter-increment：[ <identifier> <integer>? ]+ | none | inherit
+		 	identifier：计数器名称，就调用counter-reset声明的计数器的标识符。
+ 			integer：一个整数值，指定计数起始值。其值允许是0或者负整数值，如果未指定任何值，则该值为1（前提是counter-reset未显式设置计数的起始值）。其值递增是按倍数值递增，如果设置了值为2,后面元素递增值为4、6、8，依此类推。
+
+		 content：用来生成内容，其为:before、:after或::before、::after的一个属性。在生成计数器内容，主要配合counter()一起使用。
+
+		 counter()：是一个函数，其主要配合content一起使用。使用counter()来调用定义好的计数器标识符。counter()函数接受两个参数，而且两参数之间使用逗号(,)来分隔。第一个参数是counter-increment定义的属性值,用来告诉该文档插入的计数器标识符名称是什么。第二个是用来设置计数器的风格，有点类似于list-style-type。默认情况之下取值为十制，但你也可以重置这个样式风格，比如upper-roman或者upper-alpha等。*/
+		 .te{
+		 	counter-reset: num;
+		 }
+		 input:checked{
+		 	counter-increment: num;
+		 }
+		 p::before{
+		 	content: counter(num,upper-roman);
+		 }
+	</style>
+</head>
+<body>
+	<div class="te"></div>
+	<div class="demo">
+		<input type="checkbox" name="sport">
+		<input type="checkbox" name="sport">
+		<input type="checkbox" name="sport">
+		<input type="checkbox" name="sport">
+		<input type="checkbox" name="sport">
+		<input type="checkbox" name="sport">
+		<input type="checkbox" name="sport">
+		<input type="checkbox" name="sport">
+		<input type="checkbox" name="sport">
+		<p class="chose"></p>
+	</div>
+</body>
+</html>
