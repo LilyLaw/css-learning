@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>(E+F)相邻兄弟选择器</title>
+	<style>
+		/*相邻兄弟选择器可以选择紧接在另一元素后的元素，而且他们具有一个相同的父元素，换句话说，EF两元素具有一个相同的父元素，而且Ｆ元素在Ｅ元素后面，而且相邻，这样我们就可以使用相邻兄弟元素选择器来选择Ｆ元素。*/
+		p{
+			width: 300px;
+			height: 50px;
+			background-color: red;
+		}
+		div{
+			width: 300px;
+			height: 200px;
+			background-color: green;
+		}
+		p+div{
+			background: pink;
+		}
+	</style>
+</head>
+<body>
+	<p></p>
+	<div></div>
+</body>
+</html>
