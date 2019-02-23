@@ -117,7 +117,9 @@ html部分
 与显示设备相关。
 对于屏幕显示，通常是一个设备像素（点）的显示。
 对于打印机和高分辨率的屏幕，一个CSS像素意味着多个设备像素，因此，每英寸的像素的数量保持在96左右。
-这里有点没懂。。。需要深入研究一下。。。
+具体的看一下这个文档 http://www.mamicode.com/info-detail-2396539.html
+
+其他的绝对长度单位用的不多，知道就行。 
 
 
   [1]: https://developer.mozilla.org/zh-CN/docs/Web/CSS/length
