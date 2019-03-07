@@ -79,7 +79,22 @@ margin: 10%;
 ### margin百分比应用场景
 
 可以简单实现一个宽高比为2:1的矩形。
-张鑫旭讲的例子没看懂，我自己实验了一下发现不对，所以先记录下。
+``` html
+<style>
+	.box{
+		background: lightgreen;
+		overflow: hidden;
+	}
+	.father{
+		margin: 50%;
+	}
+</style>
+<div class="box">
+	<div class="father">
+	</div>
+</div>
+```
+在浏览器就会看到，`class="box"` 的元素宽高比永远是2:1，这里涉及到margin重叠，可能比较难理解。
 
 
 
