@@ -64,3 +64,8 @@
 ```
 
 那么nth-child是不是有bug？？？
+
+不是，查阅[官方文档](https://developer.mozilla.org/zh-CN/docs/Web/CSS/:nth-child)：
+> :nth-child(an+b) 这个 CSS 伪类首先找到所有当前元素的兄弟元素，然后按照位置先后顺序从1开始排序，选择的结果为第（an+b）个元素的集合（n=0，1，2，3...）。
+
+所以要找到所有兄弟元素，而不是同类型的兄弟元素。
